@@ -1,6 +1,8 @@
 require("dotenv").config();
 const express = require("express");
+const bodyParser = require('body-parser');
 const App = express();
+App.use(bodyParser.json());
 App.post("/Getdata", (req, res) => {
   console.log(req);
   res.send("An");
