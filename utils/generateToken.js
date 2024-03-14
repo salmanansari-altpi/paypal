@@ -16,9 +16,6 @@ const generateAccessToken = async () => {
                 "content-type": "application/x-www-form-urlencoded",
                 "authorization": `basic ${Buffer.from(`${clientId}:${clientSec}`).toString('base64')}`
             },
-            // headers: {
-            //     Authorization: `Basic ${Buffer.from(`${clientId}:${clientSec}`).toString('base64')}`,
-            // },
             body: 'grant_type=client_credentials'
         })
 
