@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const onboardRoute = require('./routes/onBoard.route')
 
 const App = express();
+App.use(express.urlencoded({ extended: false }))
 App.use(bodyParser.json());
 
 App.use('/test', onboardRoute)
